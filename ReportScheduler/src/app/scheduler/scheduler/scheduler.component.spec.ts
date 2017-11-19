@@ -9,17 +9,18 @@ describe('SchedulerComponent', () => {
   let component: SchedulerComponent;
   let fixture: ComponentFixture<SchedulerComponent>;
 
-  // beforeEach(async(() => {
-  //   TestBed.configureTestingModule({
-  //     declarations: [ SchedulerComponent ], imports: [AppModule]
-  //   })
-  //   .compileComponents();
-  // }));
-
-  beforeEach(() => {
+  beforeEach(async() => {
     TestBed.configureTestingModule({
-      providers:[],
-      declarations: [ SchedulerComponent ]
+      declarations: [
+        SchedulerComponent
+      ],
+      imports: [
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatNativeDateModule,
+        MatInputModule
+      ],
+      providers: []
     })
     .compileComponents();
 
@@ -32,8 +33,8 @@ describe('SchedulerComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('Should have date picker', () => {
-  //   const element = fixture.nativeElement.querySelector('#date-picker');
-  //   expect(element).toBeTruthy();
-  // });
+  it('Should have date picker', () => {
+    const element = fixture.nativeElement.querySelector('#date-picker');
+    expect(element).toBeTruthy();
+  });
 });

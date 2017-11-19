@@ -1,11 +1,26 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { SchedulerComponent } from './scheduler/scheduler/scheduler.component';
+import {MatDatepickerModule, MatNativeDateModule, MAT_DATE_LOCALE} from '@angular/material';
+import {MatFormFieldModule} from '@angular/material';
+import {MatInputModule} from '@angular/material';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+
       declarations: [
-        AppComponent
+        AppComponent,
+        SchedulerComponent
       ],
+      imports: [
+        BrowserAnimationsModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatNativeDateModule,
+        MatInputModule],
+      providers: []
     }).compileComponents();
   }));
   it('should create the app', async(() => {
