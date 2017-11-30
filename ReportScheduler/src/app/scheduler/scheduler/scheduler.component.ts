@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { NgModel } from '@angular/forms';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-scheduler',
@@ -8,9 +10,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class SchedulerComponent implements OnInit {
 
-  constructor() { }
+  moment = Date.now;
 
-  ngOnInit() {
+  constructor() { }
+   ngOnInit() {
   }
 
+  onSubmit(f: any) {}
 }

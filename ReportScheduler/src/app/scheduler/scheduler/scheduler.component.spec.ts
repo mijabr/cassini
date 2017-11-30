@@ -3,7 +3,8 @@ import { SchedulerComponent } from './scheduler.component';
 import { MatDatepickerModule, MatNativeDateModule, MAT_DATE_LOCALE} from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
-//import { AppModule } from '../../app.module';
+import { FormsModule } from '@angular/forms';
+import { DateTimePickerModule } from 'ng-pick-datetime';
 
 describe('SchedulerComponent', () => {
   let component: SchedulerComponent;
@@ -15,10 +16,8 @@ describe('SchedulerComponent', () => {
         SchedulerComponent
       ],
       imports: [
-        MatDatepickerModule,
-        MatFormFieldModule,
-        MatNativeDateModule,
-        MatInputModule
+        FormsModule,
+        DateTimePickerModule
       ],
       providers: []
     })
@@ -33,8 +32,8 @@ describe('SchedulerComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should have date picker', () => {
-    const element = fixture.nativeElement.querySelector('#date-picker');
+  it('Should have date time picker', () => {
+    const element = fixture.nativeElement.querySelector('#date-time-picker');
     expect(element).toBeTruthy();
   });
 });

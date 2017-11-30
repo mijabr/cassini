@@ -6,6 +6,8 @@ import { SchedulerComponent } from './scheduler/scheduler/scheduler.component';
 import {MatDatepickerModule, MatNativeDateModule, MAT_DATE_LOCALE} from '@angular/material';
 import {MatFormFieldModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
+import { DateTimePickerModule } from 'ng-pick-datetime';
+import { FormsModule } from '@angular/forms';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -15,11 +17,13 @@ describe('AppComponent', () => {
         SchedulerComponent
       ],
       imports: [
+        FormsModule,
         BrowserAnimationsModule,
         MatDatepickerModule,
         MatFormFieldModule,
         MatNativeDateModule,
-        MatInputModule],
+        MatInputModule,
+        DateTimePickerModule],
       providers: []
     }).compileComponents();
   }));

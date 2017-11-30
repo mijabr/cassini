@@ -4,10 +4,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { SchedulerComponent } from './scheduler/scheduler/scheduler.component';
-import {MatDatepickerModule, MatNativeDateModule, MAT_DATE_LOCALE} from '@angular/material';
-import {MatFormFieldModule} from '@angular/material';
-import {MatInputModule} from '@angular/material';
-
+import { DateTimePickerModule } from 'ng-pick-datetime';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +15,9 @@ import {MatInputModule} from '@angular/material';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatNativeDateModule,
-    MatInputModule
+    FormsModule,
+    DateTimePickerModule
   ],
-  providers: [{provide: MAT_DATE_LOCALE, useValue: 'en-GB'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
